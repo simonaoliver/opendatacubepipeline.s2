@@ -1,0 +1,20 @@
+# Configuration file to install dependencies via conda
+
+channels:
+  - nodefaults # Allows defaults channel to be placed last
+  - conda-forge/label/dev
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.6
+  - click
+  - folium
+  - geopandas
+  - h5py
+  - luigi
+  - numpy
+  - pyyaml
+  - rasterio
+  - scikit-image
+  - shapely
+  - structlog
