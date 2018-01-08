@@ -19,4 +19,4 @@ dependencies:
   - shapely
   - structlog
   - pip:
-    - git+git://github.com/GeoscienceAustralia/eo-datasets@master
+    - git+git://github.com/GeoscienceAustralia/eo-datasets@develop
