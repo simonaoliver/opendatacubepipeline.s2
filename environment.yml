@@ -18,3 +18,5 @@ dependencies:
   - scikit-image
   - shapely
   - structlog
+  - pip:
+    - git+git://github.com/GeoscienceAustralia/eo-datasets@master
