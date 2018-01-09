@@ -276,7 +276,7 @@ def create_checksum(outdir):
 
 
 def package(l1_path, gaip_fname, fmask_path, yamls_path, outdir,
-            s3_root):
+            s3_root, acq_parser_hint=None):
     """
     Package an L2 product.
 
@@ -300,10 +300,13 @@ def package(l1_path, gaip_fname, fmask_path, yamls_path, outdir,
         A string containing the full file pathname to the directory
         that will contain the packaged Level-2 datasets.
 
+    :param acq_parser_hint:
+        A string that hints at which acquisition parser should be used.
+
     :return:
         None; The packages will be written to disk directly.
     """
-    scene = acquisitions(l1_path)
+    scene = acquisitions(l1_path, acq_parser_hint)
     yaml_fname = pjoin(yamls_path,
                        basename(dirname(l1_path)),
                        '{}.yaml'.format(scene.label))
